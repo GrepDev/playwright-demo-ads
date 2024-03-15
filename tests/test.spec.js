@@ -15,9 +15,9 @@ test.describe('My Test Suite', () => {
 
 async function searchForWebsite(page) {
   await page.goto('https://google.com');
-  await page.$x("//textarea[@role='combobox' and @spellcheck='false']").fill("bitheap");
-  await page.$x("//input[@value='Google Search']").click();
-  await page.$x("//h3[contains(text(), 'bitheap')]").click();
+  await page.locator("//textarea[@role='combobox' and @spellcheck='false']").fill("bitheap");
+  await page.locator("//input[@value='Google Search']").click();
+  await page.locator("//h3[contains(text(), 'bitheap')]").click();
   await page.click('#menu-item-1303');
   await page.waitForTimeout(15000);
   await page.$x("//a[contains(@href, 'adclick.g.doubleclick.net')]").click();
