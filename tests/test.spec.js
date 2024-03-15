@@ -16,7 +16,8 @@ test.describe('My Test Suite', () => {
 async function searchForWebsite(page) {
   await page.goto('https://google.com');
   await page.locator("//textarea[@role='combobox' and @spellcheck='false']").fill("bitheap");
-  await page.locator("//input[@value='Google Search']").click();
+  const elements = await page.locator("//input[@value='Google Search']");
+  elements[1].click();
   await page.locator("//h3[contains(text(), 'bitheap')]").click();
   await page.click('#menu-item-1303');
   await page.waitForTimeout(15000);
