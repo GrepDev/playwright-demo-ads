@@ -11,6 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "@playwright/test": "^1.39.0",
+    "gptlint": "^1.0.0",
     "playwright": "^1.39.0"
   }
 }
